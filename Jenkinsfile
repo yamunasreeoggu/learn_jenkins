@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    node { label 'workstation' }
+  }
 
   stages {
 
@@ -15,4 +17,11 @@ pipeline {
       }
     }
   }
+
+  post {
+    always {
+      echo 'Sending Email'
+    }
+  }
+
 }
