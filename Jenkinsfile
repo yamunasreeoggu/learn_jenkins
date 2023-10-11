@@ -23,6 +23,11 @@ pipeline {
   stages {
 
     stage('One') {
+      input {
+        message "Should we continue?"
+        ok "Yes, we should."
+        submitter "admin"
+      }
       steps {
         sh 'echo One'
         sh 'echo $SAMPLE_URL'
