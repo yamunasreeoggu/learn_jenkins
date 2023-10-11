@@ -27,6 +27,7 @@ pipeline {
         sh 'echo One'
         sh 'echo $SAMPLE_URL'
         sh 'echo $SSH'
+        sh 'echo $PERSON'
       }
     }
 
